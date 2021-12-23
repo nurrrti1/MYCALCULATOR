@@ -1,9 +1,10 @@
 import javax.swing.*;
 
+
 import static java.lang.Math.sqrt;
 
 
-public class JavaCalculator<event> {
+public class JavaCalculator{
 
     private double total1 = 0.0;
     private double total2 = 0.0;
@@ -30,7 +31,6 @@ public class JavaCalculator<event> {
     private JButton btnEquals;
     private JButton btnX2;
     private JButton btnKoren;
-    private JButton btnSin;
 
 
     private void getOperator(String btnText) {
@@ -156,7 +156,6 @@ public class JavaCalculator<event> {
                 case '*' -> total2 = total1 * Double.parseDouble(textDisplay.getText());
                 case '^' -> total2 = total1 * total1;
                 case '√' -> total2 = sqrt(total1);
-                case 's' -> total2 = Math.sin( total1);
             }
             textDisplay.setText(Double.toString(total2));
             total1 = 0;
